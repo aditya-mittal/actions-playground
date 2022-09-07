@@ -8,7 +8,7 @@ env:
   England: Hello
 jobs:
   test-yaml:
-    runs-on: linux
+    runs-on: ubuntu-latest
     steps:
       - name: Greet the caller
         env: 
