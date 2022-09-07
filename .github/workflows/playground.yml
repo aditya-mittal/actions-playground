@@ -1,0 +1,19 @@
+name: Playground workflow
+
+on: push
+        
+env:
+  India: Namaste
+  Japan: Sayonara
+  England: Hello
+jobs:
+  test-yaml:
+    runs-on: linux
+    steps:
+      - name: Greet the caller
+        env: 
+          country: India
+          greetMessage: ${{ env.country }}
+        run: |
+          echo ${{ env.country }}
+          echo ${{ env.greetMessage }}
