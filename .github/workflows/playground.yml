@@ -15,6 +15,6 @@ jobs:
           country: India
           greetMessage: ${{ env.country }}
         run: |
-          export myCountry=${{ format('env.{0}', env.country) }}
+          export myCountry="${{ format('env.{0}', env.country) }}"
           echo ${{ env.country }}
           echo '${{ env.myCountry) }}'
