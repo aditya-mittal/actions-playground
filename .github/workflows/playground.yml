@@ -17,5 +17,5 @@ jobs:
         run: |
           export myCountry="${{ format('{0}', env.country) }}"
           echo ${{ env.country }}
-          echo '${{ env.myCountry }}'
-        shell: bash
+          echo ${{ myCountry }}
+          echo ${{ env.myCountry }}
