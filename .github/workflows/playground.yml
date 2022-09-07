@@ -18,3 +18,4 @@ jobs:
           export myCountry="${{ format('env.{0}', env.country) }}"
           echo ${{ env.country }}
           echo '${{ env.myCountry) }}'
+        shell: bash
