@@ -16,4 +16,4 @@ jobs:
           greetMessage: ${{ env.country }}
         run: |
           echo ${{ env.country }}
-          echo ${{ env.greetMessage }}
+          echo ${{ format('env.{0}', env.country) }}
