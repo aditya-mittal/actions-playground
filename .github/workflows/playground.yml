@@ -25,4 +25,5 @@ jobs:
           echo ${{ env.country }}
           echo "${greetMessage}"
           echo "${foo}"
+          echo "${env.India}"
         shell: bash
