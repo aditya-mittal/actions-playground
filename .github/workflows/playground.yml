@@ -1,6 +1,11 @@
 name: Playground workflow
 
-on: push
+on: 
+  workflow_dispatch:
+    inputs:
+      country: 
+        description: 'Country to greet'
+        required: true
         
 env:
   India: Namaste
@@ -12,8 +17,8 @@ jobs:
     steps:
       - name: Greet the caller
         env: 
-          country: India
-          greetMessage: ${{ env.India }}
+          country: ${{ inputs.country }}
+          greetMessage: ${{ env.country }}
         run: |
           export myCountry=${{ format('{0}', env.country) }}
           export foo="${{ format('env.{0}', env.country) }}"
