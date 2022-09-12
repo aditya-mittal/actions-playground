@@ -13,7 +13,7 @@ jobs:
       - name: Greet the caller
         env: 
           country: India
-          greetMessage: ${{ env.country }}
+          greetMessage: ${{ env.India }}
         run: |
           export myCountry=${{ format('{0}', env.country) }}
           export foo="${{ format('env.{0}', env.country) }}"
