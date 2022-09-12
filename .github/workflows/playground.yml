@@ -24,5 +24,5 @@ jobs:
           export foo="${{ format('env.{0}', env.country) }}"
           echo ${{ env.country }}
           export MY_COUNTRY="${country}"
-          echo ${{ env."${MY_COUNTRY}" }}
+          echo ${{ env.${MY_COUNTRY} }}
         shell: bash
