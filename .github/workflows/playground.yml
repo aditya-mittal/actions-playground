@@ -18,4 +18,5 @@ jobs:
           export myCountry=${{ format('{0}', env.country) }}
           export foo="${{ format('env.{0}', env.country) }}"
           echo ${{ env.country }}
-          echo ${{ greetMessage  }}
+          echo ${greetMessage}
+        shell: bash
