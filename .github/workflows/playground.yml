@@ -6,6 +6,6 @@ jobs:
     steps:
       - name: my-step
         run: |
-          echo ${{ github.repository }}
+          echo ${{ github.repository_owner }}
           echo ${{ github }}
           echo "Hello World!"
