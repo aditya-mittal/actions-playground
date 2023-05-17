@@ -7,5 +7,5 @@ jobs:
       - name: my-step
         run: |
           echo ${{ github.repository }}
-          echo ${{ github.owner }}
+          echo ${{ github }}
           echo "Hello World!"
