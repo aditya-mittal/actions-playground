@@ -1,31 +1,11 @@
-name: Playground workflow
-
-on: 
-  workflow_dispatch:
-    inputs:
-      country: 
-        description: 'Country to greet'
-        required: true
-        
-env:
-  India: Namaste
-  Japan: Sayonara
-  England: Hello
+name: hello-world
+on: workflow_dispatch
 jobs:
-  test-yaml:
+  my-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Greet the caller
-        env: 
-          country: ${{ inputs.country }}
-          greetMessage: '${{ env.country }}'
+      - name: my-step
         run: |
           echo ${{ github.repository }}
           echo ${{ github.owner }}
-          export myCountry=${{ format('{0}', env.country) }}
-          export foo="${{ format('env.{0}', env.country) }}"
-          echo ${{ env.country }}
-          # echo ${{ env.'${{country}}' }}
-          echo ${{ '${{env.greetMessage}}' }}
-          
-        shell: bash
+          echo "Hello World!"
