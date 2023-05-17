@@ -20,6 +20,8 @@ jobs:
           country: ${{ inputs.country }}
           greetMessage: '${{ env.country }}'
         run: |
+          echo ${{ github.repository }}
+          echo ${{ github.owner }}
           export myCountry=${{ format('{0}', env.country) }}
           export foo="${{ format('env.{0}', env.country) }}"
           echo ${{ env.country }}
