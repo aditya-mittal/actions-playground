@@ -8,4 +8,5 @@ jobs:
         run: |
           echo ${{ github.repository_owner }}
           echo ${{ github }}
+          echo ${{ github.ref_name }}
           echo "Hello World!"
