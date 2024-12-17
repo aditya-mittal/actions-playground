@@ -9,4 +9,5 @@ jobs:
           echo ${{ github.repository_owner }}
           echo ${{ github }}
           echo ${{ github.ref_name }}
+          echo $GITHUB_REF
           echo "Hello World!"
