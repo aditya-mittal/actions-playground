@@ -11,3 +11,5 @@ jobs:
           echo ${{ github.ref_name }}
           echo $GITHUB_REF
           echo "Hello World!"
+          echo "GIT_SHA_SHORT=$(git rev-parse --short ${{ github.sha }})" >> $GITHUB_ENV
+          echo ${{ env.GIT_SHA_SHORT }}
