@@ -13,3 +13,5 @@ jobs:
           echo "Hello World!"
           shortSha=$(git rev-parse --short ${{ github.sha }})
           echo $shortSha
+          echo "GIT_SHA_SHORT=$shortSha" >> $GITHUB_ENV
+          echo $GITHUB_ENV
