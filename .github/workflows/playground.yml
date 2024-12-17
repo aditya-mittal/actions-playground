@@ -9,10 +9,9 @@ jobs:
       - name: my-step
         run: |
           echo ${{ github.repository_owner }}
-          echo ${{ github }}
           echo ${{ github.ref_name }}
-          echo $GITHUB_REF
           echo "Hello World!"
           shortSha=$(git rev-parse --short ${{ github.sha }})
-          echo "GIT_SHA_SHORT=$shortSha" >> $GITHUB_ENV
+          echo $shortSha
+          echo "GIT_SHA_SHORT=${{ shortSha }}" >> $GITHUB_ENV
           echo ${{ env.GIT_SHA_SHORT }}
