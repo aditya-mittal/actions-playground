@@ -1,5 +1,12 @@
 name: hello-world
-on: workflow_dispatch
+on: 
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Helm chart version to be installed
+        type: string
+        required: false
+        default: 1.0.0+${{github.sha}}
 jobs:
   my-job:
     runs-on: ubuntu-latest
@@ -8,6 +15,7 @@ jobs:
       
       - name: my-step
         run: |
+          echo ${{ inputs.version }}
           echo ${{ github.repository_owner }}
           echo ${{ github.ref_name }}
           echo "Hello World!"
