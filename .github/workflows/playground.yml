@@ -6,7 +6,7 @@ on:
         description: Helm chart version to be installed
         type: string
         required: false
-        default: ${{GITHUB_SHA}}
+        default: $GITHUB_SHA
 jobs:
   my-job:
     runs-on: ubuntu-latest
